@@ -1,0 +1,26 @@
+# ip bound for internal routing
+bind = "127.0.0.1"
+
+# port on which the proxy server will listen
+http-port = 80
+
+# port on which the DNS server will listen
+dns-port = 53
+
+# top level domain to be used for development
+# while building this tool I came across the following rfc
+# https://tools.ietf.org/html/rfc2606. Essentially it states that the following
+# TLDs: 'test', 'example', 'invalid' and 'localhost' are restricted and
+# therefore are a safe choice to use. If you plan to use another tld for example
+# 'dev' you will need to ensure that your DNS resolver is checked before others.
+# tld = "test"
+# tld = "example"
+# tld = "invalid"
+tld = "localhost"
+
+# list of route pairs SOURCE=DEST
+# The specified tld is appended to the SOURCE and the DEST is host:port ex:
+# app = ":5000" 
+# which would proxy requests from *.app.localhost to 127.0.0.1:5000
+[routes]
+  app = ":5000"
