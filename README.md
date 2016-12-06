@@ -1,6 +1,6 @@
 # DNS-Proxy
 
-A command line tool that aims to simpifly configuring your development environment
+A command line tool that aims to simplify configuring your development environment
 for using multiple named domains. It starts a DNS and a reverse proxy server to
 map routes such as app.localhost to their respective service port. To do this 
 generally required running two services such as dnsmasq & nginx, however that
@@ -15,11 +15,11 @@ Make sure you have a working Go environment. Then just run the following:
 ```go get github.com/jatinn/dns-proxy```
 
 
-### Configuring the Dev TLD
+### Configuring your development TLD
 
 **Note** Steps are for Mac OSX.
 
-While you are free to use whatever domain you choose, I would recomment using
+While you are free to use whatever domain you choose, I would recommend using
 one of the following restricted TLDs: [Go here to learn more](https://iyware.com/dont-use-dev-for-development/)
 
 - test
